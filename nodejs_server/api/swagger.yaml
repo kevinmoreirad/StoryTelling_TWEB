@@ -1,0 +1,90 @@
+---
+swagger: "2.0"
+info:
+  description: "api for project tweb of data visualisation with d3"
+  version: "1.0.0"
+  title: "TWEB-CO2 API"
+basePath: "/api"
+schemes:
+- "http"
+- "https"
+produces:
+- "application/json"
+paths:
+  /co2/year:
+    get:
+      tags:
+      - "Year"
+      summary: "Co2 By Year"
+      description: "Co2/year endpoint returns the list of all countries and the co2\
+        \ from the\nselected year\n"
+      operationId: "co2YearGET"
+      parameters:
+      - name: "year"
+        in: "query"
+        description: "year to analyse"
+        required: true
+        type: "number"
+        format: "double"
+      responses:
+        200:
+          description: "An array countries/co2 emissions"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/co2Emission"
+        default:
+          description: "Unexpected error"
+          schema:
+            $ref: "#/definitions/Error"
+      x-swagger-router-controller: "Year"
+  /co2/country:
+    get:
+      tags:
+      - "Country"
+      summary: "Co2 by Country"
+      description: "Co2/country endpoint returns the list of all years and the co2\
+        \ from the\n selected country\n"
+      operationId: "co2CountryGET"
+      parameters:
+      - name: "country"
+        in: "query"
+        description: "country to analyse"
+        required: true
+        type: "number"
+        format: "double"
+      responses:
+        200:
+          description: "An array of years/co2 emissions"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/co2Emission"
+        default:
+          description: "Unexpected error"
+          schema:
+            $ref: "#/definitions/Error"
+      x-swagger-router-controller: "Country"
+definitions:
+  co2Emission:
+    type: "object"
+    properties:
+      country:
+        type: "string"
+        description: "name of country."
+      value:
+        type: "string"
+        description: "value of co2 emissions of country."
+      year:
+        type: "string"
+        description: "year of the value of co2 emissions"
+  Error:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      message:
+        type: "string"
+      fields:
+        type: "string"

@@ -1,0 +1,33 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "project for tweb, storytelling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"prestart": "npm install",
+	"start": "node index.js"
+  },
+  "keywords": [
+    "swagger"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinmoreirad/StoryTelling_TWEB.git"
+  },
+  "author": "Kevin Moreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinmoreirad/StoryTelling_TWEB/issues"
+  },
+  "homepage": "https://github.com/kevinmoreirad/StoryTelling_TWEB#readme",
+  "dependencies": {
+    "mongodb": "^2.2.33",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+	"connect": "^3.2.0",
+    "js-yaml": "^3.3.0",
+    "swagger-tools": "0.10.1"
+  }
+}
