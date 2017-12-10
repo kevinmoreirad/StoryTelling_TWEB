@@ -42,7 +42,7 @@ exports.co2CountryGET = function(args, res, next) {
   function connectDbAndGetCo2Emissions() {
   
       var context = {};
-      context.db_url = "mongodb://localhost:27017/bdEnvironment";
+      context.db_url = "mongodb://fillingDB:fill@ds135876.mlab.com:35876/heroku_lv1pst2r";
   
       return openDBConnection(context)
           .then(getAllCo2EmissionsOfCountry)
