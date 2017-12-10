@@ -1,5 +1,7 @@
 'use strict';
 
+var populate = require('./populateDB');
+populate.populateDB();
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////// second part, the swagger to create the API ///////////////////////////
 var fs = require('fs'),
@@ -9,7 +11,7 @@ var fs = require('fs'),
 var app = require('connect')();
 var swaggerTools = require('swagger-tools');
 var jsyaml = require('js-yaml');
-var serverPort = 8080;
+var serverPort = process.env.PORT;
 
 // swaggerRouter configuration
 var options = {
