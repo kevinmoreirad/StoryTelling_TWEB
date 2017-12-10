@@ -22,7 +22,7 @@ exports.populateDB = function() {
             },
             json: true // Automatically parses the JSON string in the response
         };
-        context.db_url = "mongodb://fillingDB:fill@ds135876.mlab.com:35876/heroku_lv1pst2r/bdEnvironment";
+        context.db_url = "mongodb://fillingDB:fill@ds135876.mlab.com:35876/heroku_lv1pst2r";
 
         return openDBConnection(context)
             .then(fetchAllPagesCo2Emissions)
