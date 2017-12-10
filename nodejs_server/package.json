@@ -20,6 +20,9 @@
   "bugs": {
     "url": "https://github.com/kevinmoreirad/StoryTelling_TWEB/issues"
   },
+  "engines": {
+    "node": "8.5.0"
+  },
   "homepage": "https://github.com/kevinmoreirad/StoryTelling_TWEB#readme",
   "dependencies": {
     "mongodb": "^2.2.33",
