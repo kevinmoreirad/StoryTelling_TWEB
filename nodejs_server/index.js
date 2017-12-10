@@ -5,13 +5,14 @@ populate.populateDB();
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////// second part, the swagger to create the API ///////////////////////////
 var cors = require('cors');
-app.use(cors());
+
 
 var fs = require('fs'),
     path = require('path'),
     http = require('http');
 
 var app = require('connect')();
+app.use(cors());
 var swaggerTools = require('swagger-tools');
 var jsyaml = require('js-yaml');
 var serverPort = process.env.PORT;
