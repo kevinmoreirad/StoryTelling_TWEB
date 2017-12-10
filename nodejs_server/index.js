@@ -4,6 +4,9 @@ var populate = require('./populateDB');
 populate.populateDB();
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////// second part, the swagger to create the API ///////////////////////////
+var cors = require('cors');
+app.use(cors());
+
 var fs = require('fs'),
     path = require('path'),
     http = require('http');
