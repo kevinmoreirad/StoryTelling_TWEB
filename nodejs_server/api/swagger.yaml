@@ -4,6 +4,7 @@ info:
   description: "api for project tweb of data visualisation with d3"
   version: "1.0.0"
   title: "TWEB-CO2 API"
+host: "localhost:8080"
 basePath: "/api"
 schemes:
 - "http"
@@ -51,8 +52,8 @@ paths:
         in: "query"
         description: "country to analyse"
         required: true
-        type: "number"
-        format: "double"
+        type: "string"
+        format: "string"
       responses:
         200:
           description: "An array of years/co2 emissions"
