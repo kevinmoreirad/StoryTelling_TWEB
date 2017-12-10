@@ -4,7 +4,7 @@ info:
   description: "api for project tweb of data visualisation with d3"
   version: "1.0.0"
   title: "TWEB-CO2 API"
-host: "localhost:8080"
+host: "stark-tor-75212.herokuapp.com"
 basePath: "/api"
 schemes:
 - "http"
