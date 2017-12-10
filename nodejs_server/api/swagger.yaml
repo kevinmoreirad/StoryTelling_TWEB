@@ -7,7 +7,6 @@ info:
 host: "stark-tor-75212.herokuapp.com"
 basePath: "/api"
 schemes:
-- "http"
 - "https"
 produces:
 - "application/json"
@@ -79,6 +78,8 @@ definitions:
       year:
         type: "string"
         description: "year of the value of co2 emissions"
+      countryCode: "string"
+      description: "code of 3 letters of each country"
   Error:
     type: "object"
     properties:
